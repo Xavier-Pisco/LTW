@@ -8,9 +8,18 @@ Repositório da cadeira *Linguagens e Tecnologias Web* no ano lectivo 2020-21.
 
 
 Professor Teóricas - André Restivo
+<br>
 Professor Práticas - *undefined*
 
 <br>
+
+|Designação|Peso|Nota Mínima|
+|-|-|-|
+|Exame|50%|8|
+|Trabalho|50%|8|
+
+Nota: 7.99 não é nota mínima
+
 <br>
 
 ### Editor de códgio - [VScode](https://code.visualstudio.com/)
@@ -21,9 +30,13 @@ Professor Práticas - *undefined*
 
 ---
 
+## Datas
+
+---
+
 ## Teóricas
 
---
+---
 
 ## Práticas
 
