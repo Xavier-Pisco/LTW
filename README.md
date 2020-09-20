@@ -15,10 +15,9 @@ Professor Práticas - *undefined*
 
 |Designação|Peso|Nota Mínima|
 |-|-|-|
-|Exame|50%|8|
-|Trabalho|50%|8|
+|Exame|50%|40%|
+|Trabalho laboratorial|50%|40%|
 
-Nota: 7.99 não é nota mínima
 
 <br>
 
