@@ -24,8 +24,7 @@ Professor Práticas - *undefined*
 ### Editor de códgio - [VScode](https://code.visualstudio.com/)
 
 #### Extensões:
--   [LiveServer](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
--   [BrowserPreview](https://marketplace.visualstudio.com/items?itemName=auchenberg.vscode-browser-preview)
+-   [QuickHTMLPreview](https://marketplace.visualstudio.com/items?itemName=daiyy.quick-html-previewer)
 
 ---
 
