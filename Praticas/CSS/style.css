@@ -1,0 +1,152 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-right: 10em;
+    padding-left: 10em;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+}
+
+body > header {
+    background-color: #046DD5;
+    padding: 1em;
+}
+
+header > * {
+    margin: 0em;
+}
+
+header > h2 {
+    font-size: smaller;
+    font-weight: 900;
+}
+
+h1 {
+    font-weight: bolder;
+}
+
+ul {
+    list-style-type: none;
+    background-color: #FFF;
+}
+
+
+#related {
+    background-color: #2A2F33;
+    color: #FFF;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+ul {
+    padding: 0em;
+    margin: 0em;
+}
+
+
+li > a{
+    color: #000;
+    border-top: solid;
+    border-width: 0.4em;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    padding: 1em;
+}
+
+li:first-child > a{
+    border-color: #E1493E;
+}
+
+li:nth-child(2) > a{
+    border-color: #8ABA56;
+}
+
+li:nth-child(3) > a{
+    border-color: #5B4282;
+}
+
+li:nth-child(4) > a{
+    border-color: #FF8932;
+}
+
+li:nth-child(5) > a{
+    border-color: #19B6E9;
+}
+
+li:nth-child(6) > a{
+    border-color: #E84C8B;
+}
+
+
+article footer {
+    background-color: #F4655F;
+}
+
+footer {
+    background-color: #000;
+    color: #FFF;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 0.9em;
+}
+
+
+.author::before{
+    content: "By ";
+}
+
+#news header {
+    position: relative;
+}
+
+#news header h1 {
+    position: absolute;
+    margin: 1em;
+    text-shadow: 5px 5px 5px #000;
+    max-width: 15%;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+img {
+    width: 100%;
+}
+
+#news article p:first-of-type::first-letter {
+    font-size: 2em;
+}
+
+#signup a:first-of-type{
+    border-right-style: solid;
+    border-right-width: 1px;
+    padding-right:1em;
+}
+
+#signup a:nth-child(2) {
+    margin-left:1em;
+}
+
+input {
+    display: none;
+}
+
+#news article {
+    background-color: white;
+}
+
+.tags a, .comments {
+    text-decoration: underline;
+}
+
+.comments::after {
+    content: " comments";
+}
