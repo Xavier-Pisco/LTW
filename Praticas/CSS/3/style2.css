@@ -1,0 +1,31 @@
+body {
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 3;
+}
+
+#green {
+    grid-column-end: span 3;
+    grid-row-end: span 1;
+}
+
+
+#yellow {
+    grid-column-end: span 1;
+    grid-row-end: span 2;
+}
+
+#orange {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+#blue {
+    grid-column-end: span 1;
+    grid-row-end: span 1;
+}
+
+#red {
+    grid-column-end: span 1;
+    grid-row-end: span 2;
+}

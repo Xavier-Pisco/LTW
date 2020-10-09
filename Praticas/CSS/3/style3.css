@@ -1,0 +1,52 @@
+body {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-areas: 
+    "yellow yellow"
+    "blue orange"
+    "blue red"
+    "blue green";
+}
+
+#yellow {
+    grid-area: yellow;
+    padding-bottom: 10em;
+}
+
+#blue{
+    grid-area: blue;
+}
+
+#orange{
+    grid-area: orange;
+}
+
+#red{
+    grid-area: red;
+}
+
+#green{
+    grid-area: green;
+}
+
+#yellow ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#yellow li:nth-child(1){
+    flex-grow: 3;
+}
+
+
+#yellow li, #red li{
+    flex-grow: 1;
+}
+
+#red ul {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+
