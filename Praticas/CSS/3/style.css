@@ -15,8 +15,12 @@ body {
     order: 3;
 }
 
-section {
-    order: 3
+#orange {
+    order: 4;
+}
+
+#blue {
+    order: 5;
 }
 
 #orange {
