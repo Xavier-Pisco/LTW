@@ -1,0 +1,44 @@
+#register h1, #login h1 {
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    padding: 1em;
+    width: 20em;
+    margin: 2em auto;
+}
+
+label {
+    padding: 1em;
+    font-weight: bold;
+}
+
+label, input {
+    display: block;
+}
+
+input[type=submit]{
+    background-color: black;
+    color: white;
+    padding: 1em;
+    width: auto;
+    margin-left: auto;
+}
+
+input {
+    display: block;
+    border: none;
+    background-color: white;
+    border-bottom: 1px solid black;
+    margin: 1em 0;
+    width: 100%;
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 30em) {
+    #register, #login {
+      background-color: white;
+    }
+  }
+
