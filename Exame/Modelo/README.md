@@ -1,0 +1,262 @@
+# Modelo
+
+## Pergunta 1
+
+**a. \<title>**
+
+Os elementos obrigatórios são \<!DOCTYPE html>,\<html>,\<head>, \<title> e \<body>.
+
+## Perunta 2
+
+**b. \<label>Username: \<input name="username" type="text">\</label>**
+
+## Pergunta 3
+
+**a. The id must be unique and each element can only have one id.**
+
+Os browsers aceitam id repetidos mas num HTML correto não é suposto haver ids repetidos.
+
+## Pergunta 4
+
+**c. ul > :first-child**
+
+ul:first-child li, refere todos os li do primeiro ul do ficheiro.
+
+ul li(1), não é válido.
+
+ul li :first-child, refere o primeiro filho de todos os li
+
+## Pergunta 5
+
+**a.**
+
+Ao fazer float: rigth o elemento fica na mesma linha mas à direita e os elementos abaixo do mesmo "sobem".
+
+## Pergunta 6
+
+**b. \<div> { font-size: 2rem }**
+
+2x não é válido, 2em e 200% têm como tamanho base o elemento pai, o que faz com que fique 4 vezes maior. 2rem tem como base o tamanho da fonte do body, por isso fica 2 vezes maior.
+
+## Pergunta 7
+
+**c.**
+```php
+function existsStudent($number) {
+	return calculateGrade($number) !== NULL;
+}
+```
+
+-	null >= 0 <=> true
+-	0 != null <=> false
+-	is não é um operador de php
+
+## Pergunta 8
+
+Esta foi um bocado ao calhas.
+
+**The script sends a "notication" to the browser telling it to load another URL and continues the script execution.**
+
+## Pergunta 9
+
+**b. Always using the let keyowrd.**
+
+Variáveis definidas globalmente com **let** são globais e mesmo que seja possível declarar com var não é recomendado pois pode gerar confusões.
+
+## Pergunta 10
+
+**a. In HTTP requests and responses.**
+
+## Pergunta 11
+
+**b. The CSRF token is generated and stored on the server, sent to the browser inside the HTML code and resent to the server where it is checked.**
+
+É criada aleatoriamente pelo servidor, é passado como um input type="hidden" no HTML e é reenviado para o servidor para ser verificado.
+
+## Pergunta 12
+
+**c. Brute force attacks against weak passwords.**
+
+Ao utilizar o salt apenas é alterado o valor que está guardado na base de dados. Quando se faz um brute force attack, não se tenta "adivinhar" o valor na base de dados mas sim a password, que é a mesma com ou sem salt.
+
+## Pergunta 13
+
+**0,0,1,1**
+
+-	0 Inline styles
+-	0 Ids
+-	1 Classes / Attributes (.bar)
+-	1 Elements (li)
+
+## Pergunta 14
+
+**0,0,2,1**
+
+-	0 Inline styles
+-	0 Ids
+-	2 Classes / Attributes (:first-of-type .second)
+-	1 Elements (section)
+
+## Pergunta 15
+
+**0,1,0,1**
+
+-	0 Inline styles
+-	1 Ids (#foo)
+-	0 Classes / Attributes
+-	1 Elements (section)
+
+## Pergunta 16
+
+**0,1,0,1**
+
+-	0 Inline styles
+-	1 Ids (foo)
+-	0 Classes / Attributes
+-	1 Elements (section)
+
+## Pergunta 17
+
+**0,0,3,2**
+
+-	0 Inline styles
+-	0 Ids
+-	3 Classes / Attributes (.bar .first :first-child)
+-	2 Elements (li li)
+
+## Pergunta 18
+
+**0,1,2,2**
+
+-	0 Inline styles
+-	1 Ids
+-	2 Classes / Attributes (-first :first-child)
+-	2 Elements (li li)
+
+
+## Pergunta 19
+
+**purple**
+
+A regra mais específica para o elemento B é a R5, logo a cor do elemento vai ser a mesma do seu antecessor, ul. A cor de ul é garantida através da restrição R4.
+
+## Pergunta 20
+
+**A [groundhog would hog all the ground he could hog, if a groundhog could hog g]round**
+
+Uma string comçada por g e acabada em g.
+
+
+## Pergunta 21
+
+**A [groundhog] would hog all the ground he could hog, if a groundhog could hog ground**
+
+O operador +? significa uma ou mais vezes mas tenta o mínimo de vezes possível
+
+## Pergunta 22
+
+**A groundhog would hog a[ll] the ground he could hog, if a groundhog could hog ground**
+
+O operador \1 faz encontra um caracter igual ao ultimo que foi encontrado na 1ª expressão, neste caso, encontra um caracter que seja igual ao anterior.
+
+## Pergunta 23
+
+**A groundhog would hog all the [ground] he could hog, if a groundhog could hog ground**
+
+O operador (?!...) garante que o que estiver após esse operador não existe na string encontrada.
+
+## Pergunta 24
+
+**A groundhog would hog all the ground he could hog, if a groundhog could hog [ground]**
+
+O operador $ faz com que a pesquisa seja feita do fim para o início.
+
+## Pergunta 25
+
+**A [groundhog would hog all the gro]und he could hog, if a groundhog could hog ground**
+
+Encontra três letras seguidas, seguidas de 0 ou mais caracteres e cuja string acabe nas primeiras três letras
+
+## Pergunta 26
+
+```php
+<?php
+include_once('game.php');
+
+$state = state($_POST['id']);
+
+if ($state['state'] === 'playing' && isset($_POST['position']) && $state['squares'][$_POST['position']] === '') {
+	play($_POST['id'], $_POST['position']);
+	$state = state($_POST['id']);
+}
+
+return json_encode($state);
+?>
+```
+
+## Pergunta 27
+
+```javascript
+
+function start() {
+	let id = document.getElementById('tic-tac-toe').attributes(['data-id']).value
+
+	request.open("post", "play.php", true)
+	request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+	request.send(encodeForAjax({id: id}))
+
+	request.addEventListener('load', () {
+		let response = JSON.parse(this.responseText)
+		let squares = response['squares']
+		let divs = Array.from(document.getElementsByClassName('square'));
+
+		for (let i = 0; i < squares.length; i++) {
+			if (squares[i] === 'X') {
+				divs[i].innerHTML = 'X'
+			} else if (squares[i] === 'O') {
+				divs[i].innerHTML = 'O'
+			} else if (squares[i] === '') {
+				divs[i].innerHTML = ''
+			}
+		}
+	})
+}
+```
+
+## Pergunta 28
+
+```javascript
+
+let divs = Array.from(document.getElementsByClassName('square'))
+
+for (let i = 0; i < divs.length; i++) {
+	divs[i].addEventListener('onClick', play(i))
+}
+
+function play(position) {
+	let id = document.getElementById('tic-tac-toe').attributes(['data-id']).value
+
+	request.open("post", "play.php", true)
+	request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+	request.send(encodeForAjax({id: id, position: position}))
+
+	request.addEventListener('load', () {
+		let response = JSON.parse(this.responseText)
+		let squares = response['squares']
+		let divs = Array.from(document.getElementsByClassName('square'))
+
+		for (let i = 0; i < squares.length; i++) {
+			if (squares[i] === 'X') {
+				divs[i].innerHTML = 'X'
+			} else if (squares[i] === 'O') {
+				divs[i].innerHTML = 'O'
+			} else if (squares[i] === '') {
+				divs[i].innerHTML = ''
+			}
+		}
+	})
+}
+
+```
+
+
