@@ -259,4 +259,20 @@ function play(position) {
 
 ```
 
+## Pergunta 29
+
+**//recipes/recipe/ingredients/ingredient/text()**
+
+
+## Pergunta 30
+
+**//recipes/recipe/name[text() = 'Mixed Toast']/../ingredients/count(ingredient)**
+
+## Pergunta 31
+
+**//recipes/count(recipe[@difficulty = 'medium'])**
+
+## Pergunta 32
+
+**//recipes/recipe/ingredients/ingredient[text() = 'Apple']/../../name/text()**
 
