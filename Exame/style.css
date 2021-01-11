@@ -1,3 +1,4 @@
-ul li:first-child {
-	background-color: red;
+div {
+	margin: 1rem;
+	border: 1px red solid;
 }
